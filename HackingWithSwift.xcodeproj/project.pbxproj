@@ -10,6 +10,8 @@
 		2CB9F4B62659DD80000A3AE7 /* Bundle+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9F4B52659DD80000A3AE7 /* Bundle+Decoding.swift */; };
 		2CB9F4BB2659E590000A3AE7 /* ProjectListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9F4BA2659E590000A3AE7 /* ProjectListDataSource.swift */; };
 		2CB9F4BF2659F16C000A3AE7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9F4BE2659F16C000A3AE7 /* DetailView.swift */; };
+		2CB9F4C22659F7F5000A3AE7 /* NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9F4C12659F7F5000A3AE7 /* NavigationDelegate.swift */; };
+		2CB9F4C42659FA71000A3AE7 /* WebView+LoadString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9F4C32659FA71000A3AE7 /* WebView+LoadString.swift */; };
 		519AE14D2194787D001F5CFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AE14C2194787D001F5CFF /* AppDelegate.swift */; };
 		519AE14F2194787D001F5CFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519AE14E2194787D001F5CFF /* ViewController.swift */; };
 		519AE1522194787D001F5CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 519AE1502194787D001F5CFF /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		2CB9F4B52659DD80000A3AE7 /* Bundle+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decoding.swift"; sourceTree = "<group>"; };
 		2CB9F4BA2659E590000A3AE7 /* ProjectListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListDataSource.swift; sourceTree = "<group>"; };
 		2CB9F4BE2659F16C000A3AE7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2CB9F4C12659F7F5000A3AE7 /* NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDelegate.swift; sourceTree = "<group>"; };
+		2CB9F4C32659FA71000A3AE7 /* WebView+LoadString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebView+LoadString.swift"; sourceTree = "<group>"; };
 		519AE1492194787D001F5CFF /* HackingWithSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackingWithSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519AE14C2194787D001F5CFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		519AE14E2194787D001F5CFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			children = (
 				519AE16E219479E3001F5CFF /* Project.swift */,
 				2CB9F4B52659DD80000A3AE7 /* Bundle+Decoding.swift */,
+				2CB9F4C32659FA71000A3AE7 /* WebView+LoadString.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 				519AE16C21947911001F5CFF /* DetailViewController.swift */,
 				519AE17221948C5A001F5CFF /* ReadViewController.swift */,
 				2CB9F4BC2659E594000A3AE7 /* Data Sources */,
+				2CB9F4C02659F7CE000A3AE7 /* Delegates */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +119,14 @@
 				2CB9F4BE2659F16C000A3AE7 /* DetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2CB9F4C02659F7CE000A3AE7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				2CB9F4C12659F7F5000A3AE7 /* NavigationDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		519AE1402194787D001F5CFF = {
@@ -265,6 +279,8 @@
 				2CB9F4BF2659F16C000A3AE7 /* DetailView.swift in Sources */,
 				2CB9F4BB2659E590000A3AE7 /* ProjectListDataSource.swift in Sources */,
 				519AE14F2194787D001F5CFF /* ViewController.swift in Sources */,
+				2CB9F4C42659FA71000A3AE7 /* WebView+LoadString.swift in Sources */,
+				2CB9F4C22659F7F5000A3AE7 /* NavigationDelegate.swift in Sources */,
 				2CB9F4B62659DD80000A3AE7 /* Bundle+Decoding.swift in Sources */,
 				519AE14D2194787D001F5CFF /* AppDelegate.swift in Sources */,
 				519AE16F219479E3001F5CFF /* Project.swift in Sources */,
