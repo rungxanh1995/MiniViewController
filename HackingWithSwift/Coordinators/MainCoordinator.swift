@@ -19,6 +19,7 @@ class MainCoordinator: Coordinator {
 	func start() {
 		let vc = ViewController.instantiate()
 		vc.coordinator = self
+		vc.showProjectAction = show // connect to the show(_:) method of this coordinator
 		navigationController.pushViewController(vc, animated: false)
 	}
 	
@@ -26,6 +27,7 @@ class MainCoordinator: Coordinator {
 		let detailVC = DetailViewController.instantiate()
 		detailVC.coordinator = self
 		detailVC.project = project
+		detailVC.readProjectAction = read // connect to the read(_:) method of this coordinator
 		navigationController.pushViewController(detailVC, animated: true)
 	}
 	

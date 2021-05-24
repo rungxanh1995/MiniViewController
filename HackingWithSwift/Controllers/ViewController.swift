@@ -12,6 +12,9 @@ class ViewController: UITableViewController, Storyboarded {
 	let projectListDataSource = ProjectListDataSource()
 	weak var coordinator: MainCoordinator?
 	
+	typealias ShowProjectAction = (Project) -> Void
+	var showProjectAction: ShowProjectAction?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		tableView.dataSource = projectListDataSource
@@ -21,7 +24,7 @@ class ViewController: UITableViewController, Storyboarded {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let project = projectListDataSource.project(at: indexPath.row)
-		coordinator?.show(project)
+		showProjectAction?(project)
     }
 }
 

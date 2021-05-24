@@ -11,15 +11,19 @@ import WebKit
 class NavigationDelegate: NSObject, WKNavigationDelegate {
 	private let allowedSites = ["apple.com", "hackingwithswift.com"]
 	
-	func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-		if let host = navigationAction.request.url?.host {
-			if allowedSites.contains(where: host.contains) {
-				decisionHandler(.allow)
-				return
-			} else {
-				print("Disallowed invalid site: \(host).")
-			}
+	func isAllowed(_ url: URL?) -> Bool {
+		guard let host = url?.host else { return false }
+		if allowedSites.contains(where: host.contains) {
+			return true
 		}
-		decisionHandler(.cancel)
+		return false
+	}
+	
+	func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+		if isAllowed(navigationAction.request.url) {
+			decisionHandler(.allow)
+		} else {
+			decisionHandler(.cancel)
+		}
 	}
 }
